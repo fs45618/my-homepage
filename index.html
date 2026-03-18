@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 - 松哥</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .news-item {
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            background: #f8f9fa;
+            margin-bottom: 10px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .news-item h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .news-item p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .link-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+
+        .link-card h4 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .link-card p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .knowledge-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .point-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .point-card h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .point-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .point-card li {
+            padding: 5px 0;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .point-card li:before {
+            content: "• ";
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>松哥的个人主页</h1>
+            <p>每日新闻 · 学习资源 · 知识管理</p>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">📰 今日新闻摘要</h2>
+            <div id="news-container">
+                <div class="news-item">
+                    <h3>新闻标题 1</h3>
+                    <p>新闻内容摘要...</p>
+                </div>
+                <div class="news-item">
+                    <h3>新闻标题 2</h3>
+                    <p>新闻内容摘要...</p>
+                </div>
+                <div class="news-item">
+                    <h3>新闻标题 3</h3>
+                    <p>新闻内容摘要...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">📚 学习课程链接</h2>
+            <div class="links-grid">
+                <a href="#" class="link-card">
+                    <h4>Python 编程基础</h4>
+                    <p>从零开始学习 Python 编程语言</p>
+                </a>
+                <a href="#" class="link-card">
+                    <h4>Web 开发入门</h4>
+                    <p>HTML、CSS、JavaScript 基础教程</p>
+                </a>
+                <a href="#" class="link-card">
+                    <h4>数据结构与算法</h4>
+                    <p>经典算法与数据结构学习资源</p>
+                </a>
+                <a href="#" class="link-card">
+                    <h4>机器学习基础</h4>
+                    <p>AI 与机器学习入门课程</p>
+                </a>
+                <a href="#" class="link-card">
+                    <h4>Git 版本控制</h4>
+                    <p>代码版本管理工具学习</p>
+                </a>
+                <a href="#" class="link-card">
+                    <h4>数据库入门</h4>
+                    <p>SQL 与数据库设计基础</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">💡 知识点整理</h2>
+            <div class="knowledge-points">
+                <div class="point-card">
+                    <h4>编程基础</h4>
+                    <ul>
+                        <li>变量与数据类型</li>
+                        <li>条件语句与循环</li>
+                        <li>函数定义与调用</li>
+                        <li>错误处理机制</li>
+                    </ul>
+                </div>
+                <div class="point-card">
+                    <h4>前端开发</h4>
+                    <ul>
+                        <li>HTML 语义化标签</li>
+                        <li>CSS 布局与响应式</li>
+                        <li>JavaScript ES6+ 特性</li>
+                        <li>DOM 操作与事件</li>
+                    </ul>
+                </div>
+                <div class="point-card">
+                    <h4>后端开发</h4>
+                    <ul>
+                        <li>RESTful API 设计</li>
+                        <li>数据库连接与操作</li>
+                        <li>身份验证与授权</li>
+                        <li>性能优化技巧</li>
+                    </ul>
+                </div>
+                <div class="point-card">
+                    <h4>开发工具</h4>
+                    <ul>
+                        <li>Git 版本控制</li>
+                        <li>VS Code 配置</li>
+                        <li>命令行工具使用</li>
+                        <li>调试技巧</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 松哥的个人主页 | 更新时间：<span id="update-time"></span></p>
+        </footer>
+    </div>
+
+    <script>
+        // 更新时间
+        document.getElementById('update-time').textContent = new Date().toLocaleString('zh-CN');
+        
+        // 模拟新闻数据（实际使用时可替换为真实数据源）
+        const newsData = [
+            {
+                title: "AI 技术持续发展",
+                summary: "人工智能技术在各个领域取得新突破，应用范围不断扩大。"
+            },
+            {
+                title: "编程语言趋势分析",
+                summary: "2026 年最受欢迎的编程语言排名出炉，Python 依然位居前列。"
+            },
+            {
+                title: "开源项目活跃度",
+                summary: "GitHub 上开源项目数量持续增长，社区贡献活跃。"
+            }
+        ];
+        
+        // 更新新闻内容
+        function updateNews() {
+            const container = document.getElementById('news-container');
+            container.innerHTML = newsData.map(news => `
+                <div class="news-item">
+                    <h3>${news.title}</h3>
+                    <p>${news.summary}</p>
+                </div>
+            `).join('');
+        }
+        
+        // 页面加载时更新新闻
+        updateNews();
+    </script>
+</body>
+</html>
